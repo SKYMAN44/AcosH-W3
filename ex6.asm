@@ -25,7 +25,7 @@ main:
 	ecall
 	# x * 2 = x << 1
 	slli a0, t0, 1
-	li a7, 1
+	li a7, 35
 	ecall
 	la a0, space
 	li a7, 4
@@ -35,7 +35,7 @@ main:
 	slli t1, t0, 1
 	slli t2, t0, 0
 	add a0, t1, t2
-	li a7, 1
+	li a7, 35
 	ecall
 	la a0, space
 	li a7, 4
@@ -43,7 +43,7 @@ main:
 	
 	# x * 4 = x << 2
 	slli a0, t0, 2
-	li a7, 1
+	li a7, 35
 	ecall
 	la a0, space
 	li a7, 4
@@ -53,7 +53,7 @@ main:
 	slli t1, t0, 2
 	slli t2, t0, 0
 	add a0, t1, t2
-	li a7, 1
+	li a7, 35
 	ecall
 	la a0, space
 	li a7, 4
@@ -61,7 +61,7 @@ main:
 	
 	#x * 8 = x << 3;
 	slli a0, t0, 3
-	li a7, 1
+	li a7, 35
 	ecall
 	la a0, space
 	li a7, 4
@@ -76,7 +76,7 @@ main:
 	add t6, t3, t4
 	add t1, t5, t6
 	add a0, t1, t0
-	li a7, 1
+	li a7, 35
 	ecall
 	la a0, space
 	li a7, 4
@@ -90,7 +90,7 @@ main:
 	
 	# x / 2 = x >> 1
 	srli a0, t0, 1
-	li a7, 1
+	li a7, 35
 	ecall
 	la a0, space
 	li a7,4
@@ -99,7 +99,7 @@ main:
 	# x / 3  will use normal division
 	li t1, 3
 	div a0, t0, t1
-	li a7, 1
+	li a7, 35
 	ecall
 	la a0, space
 	li a7, 4
@@ -108,7 +108,7 @@ main:
 	# x / 5
 	li t1, 5
 	div a0, t0, t1
-	li a7, 1
+	li a7, 35
 	ecall
 	la a0, space
 	li a7, 4
@@ -116,7 +116,7 @@ main:
 	
 	# x / 8 = x >> 3
 	srli a0, t0, 3
-	li a7, 1
+	li a7, 35
 	ecall
 	la a0, space
 	li a7, 4
@@ -125,7 +125,7 @@ main:
 	# x / 31
 	li t1, 31
 	div a0, t0, t1
-	li a7, 1
+	li a7, 35
 	ecall
 	la a0, space
 	li a7, 4
@@ -139,7 +139,7 @@ main:
 	# x % 2 for powers of 2 we can use : x & (2^n - 1)
 	li t1, 1
 	and a0, t0, t1
-	li a7, 1
+	li a7, 35
 	ecall
 	la a0, space
 	li a7,4
@@ -148,7 +148,7 @@ main:
 	# x % 3
 	li t1, 3
 	rem a0, t0, t1
-	li a7, 1
+	li a7, 35
 	ecall
 	la a0, space
 	li a7, 4
@@ -157,7 +157,7 @@ main:
 	# x % 5
 	li t1, 5
 	rem a0, t0, t1
-	li a7, 1
+	li a7, 35
 	ecall
 	la a0, space
 	li a7, 4
@@ -166,7 +166,7 @@ main:
 	# x % 8
 	li t1, 7
 	and a0, t0, t1
-	li a7, 1
+	li a7, 35
 	ecall
 	la a0, space
 	li a7, 4
@@ -175,7 +175,7 @@ main:
 	# x % 31
 	li t1, 31
 	rem a0, t0, t1
-	li a7, 1
+	li a7, 35
 	ecall
 	la a0, space
 	li a7, 4
